@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Box Model & Display Properties — Simple Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      color: #222;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .box {
+      width: 200px;
+      margin: 20px;
+      padding: 15px;
+      border: 5px solid #4caf50;
+      background: #e8f5e9;
+    }
+    .inline-example span {
+      margin: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .inline { display: inline; background: #fff9c4; }
+    .inline-block { display: inline-block; background: #ffccbc; width: 100px; height: 40px; }
+    .block { display: block; background: #bbdefb; width: 100px; height: 40px; }
+    .flex {
+      display: flex;
+      gap: 10px;
+    }
+    .flex div {
+      flex: 1;
+      background: #ede7f6;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .grid div {
+      background: #f1f8e9;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model & Display Properties</h1>
+
+  <div class="section">
+    <h2>1) Box Model</h2>
+    <div class="box">Content Area<br>Padding: 15px<br>Border: 5px<br>Margin: 20px</div>
+    <p><b>Explanation:</b> Content is inside → Padding adds space inside border → Border surrounds padding → Margin adds space outside element.</p>
+  </div>
+
+  <div class="section">
+    <h2>2) Display: Inline, Block, Inline-Block</h2>
+    <div class="inline-example">
+      <span class="inline">Inline</span>
+      <span class="inline-block">Inline-Block</span>
+      <span class="block">Block</span>
+    </div>
+    <p><b>Inline:</b> Does not break line, cannot set width/height.<br>
+       <b>Block:</b> Takes full width, starts new line.<br>
+       <b>Inline-block:</b> Inline flow + can set width/height.</p>
+  </div>
+
+  <div class="section">
+    <h2>3) Flexbox Example</h2>
+    <div class="flex">
+      <div>Flex 1</div>
+      <div>Flex 2</div>
+      <div>Flex 3</div>
+    </div>
+    <p>Flex is 1D layout → row/column. Use <code>justify-content</code>, <code>align-items</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>4) Grid Example</h2>
+    <div class="grid">
+      <div>1</div><div>2</div><div>3</div>
+      <div>4</div><div>5</div><div>6</div>
+    </div>
+    <p>Grid is 2D layout → rows + columns.</p>
+  </div>
+
+  <div class="section">
+    <h2>5) Quick Cheat Sheet</h2>
+    <table>
+      <tr><th>Concept</th><th>Notes</th></tr>
+      <tr><td>Content</td><td>Actual data/text inside element.</td></tr>
+      <tr><td>Padding</td><td>Space inside border. Affects background.</td></tr>
+      <tr><td>Border</td><td>Line around padding. Example: <code>border:2px solid</code>.</td></tr>
+      <tr><td>Margin</td><td>Space outside border. Separates elements.</td></tr>
+      <tr><td>Display</td><td>inline / block / inline-block / flex / grid.</td></tr>
+      <tr><td>Flex</td><td>1D layouts. Use <code>display:flex</code>.</td></tr>
+      <tr><td>Grid</td><td>2D layouts. Use <code>display:grid</code>.</td></tr>
+    </table>
+  </div>
+
+  <footer style="text-align:center;color:#777;font-size:13px;margin-top:10px">Clean & Simple CSS Box Model + Display Demo</footer>
+</body>
+</html>
