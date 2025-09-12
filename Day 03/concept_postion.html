@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .container {
+      border: 2px solid black;
+      height: 500px;
+      margin: 20px;
+      padding: 10px;
+      position: relative; /* absolute ke liye reference banega */
+    }
+
+    .box {
+      width: 120px;
+      height: 80px;
+      margin: 10px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .static {
+      background: gray;
+      position: static; /* Default */
+      top: 30px; /* kaam nahi karega */
+      left: 30px;
+    }
+
+    .relative {
+      background: blue;
+      position: relative;
+      top: 30px;   /* apni normal jagah se move karega */
+      left: 30px;
+    }
+
+    .absolute {
+      background: green;
+      position: absolute;
+      top: 50px;   /* parent (container) ke respect mein place hoga */
+      right: 20px;
+    }
+
+    .fixed {
+      background: red;
+      position: fixed;
+      top: 20px;   /* hamesha screen ke top par fix rahega */
+      right: 20px;
+    }
+
+    .sticky {
+      background: orange;
+      position: sticky;
+      top: 0;      /* scroll karne par yeh top par chipak jayega */
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Position Comparison</h1>
+  <p>Scroll karke <b>sticky</b> aur <b>fixed</b> ka difference dekho.</p>
+
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box relative">Relative</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box fixed">Fixed</div>
+    <div class="box sticky">Sticky</div>
+  </div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi? (extra content for scrolling)</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, excepturi?</p>
+</body>
+</html>
