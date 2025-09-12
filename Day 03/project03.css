@@ -1,0 +1,29 @@
+body{
+    background-color: antiquewhite;
+}
+
+#container{
+    background-color: rgb(166, 41, 41);
+    height: 200px;
+    width: 320px;
+    position: relative;
+}
+
+
+.box{
+    background-color: rgb(53, 53, 125);
+    height: 95px;
+    width: 320px;
+    position: absolute;
+    top: 50px;
+}
+
+.circle{
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    position: relative;
+    top: 58px;
+    left: 110px;
+}

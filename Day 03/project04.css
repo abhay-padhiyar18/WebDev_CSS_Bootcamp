@@ -1,0 +1,35 @@
+#container {
+  background-color: orange;
+  height: 222px;
+  width: 320px;
+  border: 2px solid rgb(143, 130, 130);
+  box-shadow: 0 0 10px rgb(3, 233, 95), 0 0 20px rgb(233, 180, 7);
+  position: relative;
+  margin: 150px;
+
+}
+
+.box {
+  height: 75px;
+  width: 320px;
+}
+
+.first {
+  background-color: white;
+  position: absolute;
+  top: 72px;
+}
+
+.second {
+  background-color: rgb(21, 219, 18);
+  position: absolute;
+  bottom: 0px;
+}
+
+.circle img {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  left: 120px;
+  top: 72px;
+}

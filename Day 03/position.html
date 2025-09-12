@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 20px 0;
+      padding: 20px;
+    }
+
+    .example {
+      border: 1px dashed #ccc;
+      height: 200px;
+      margin-top: 10px;
+      padding: 10px;
+      position: relative; /* base for relative/absolute examples */
+    }
+
+    .box {
+      width: 100px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .a { background: #ffeb99; border: 2px solid #e6b800; }
+    .b { background: #b3ffcc; border: 2px solid #33cc66; }
+    .c { background: #b3d1ff; border: 2px solid #3385ff; }
+
+    /* Relative Example */
+    .relative .b {
+      position: relative;
+      top: -20px;
+      left: 20px;
+    }
+
+    /* Absolute Example */
+    .absolute .b {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* Fixed Example */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffcccc;
+      border: 2px solid #ff6666;
+      padding: 10px;
+    }
+
+    /* Sticky Example */
+    .sticky-container {
+      height: 250px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #d9f2ff;
+      border: 1px solid #00aaff;
+      padding: 8px;
+    }
+
+    /* Z-index Example */
+    .zindex .a, .zindex .b, .zindex .c {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+    .zindex .b { top: 70px; left: 70px; z-index: 5; }
+    .zindex .c { top: 100px; left: 100px; z-index: 1; }
+    .zindex .a { z-index: 10; }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Position Examples</h1>
+
+  <!-- Static -->
+  <div class="section">
+    <h2>1. Static (Default)</h2>
+    <div class="example">
+      <div class="box a">Box A</div>
+      <div class="box b">Box B</div>
+      <div class="box c">Box C</div>
+    </div>
+    <p>By default, all elements are <strong>static</strong>. They follow normal document flow.</p>
+  </div>
+
+  <!-- Relative -->
+  <div class="section">
+    <h2>2. Relative</h2>
+    <div class="example relative">
+      <div class="box a">Box A</div>
+      <div class="box b">Moved</div>
+      <div class="box c">Box C</div>
+    </div>
+    <p><strong>Relative</strong> moves an element without removing its original space.</p>
+  </div>
+
+  <!-- Absolute -->
+  <div class="section">
+    <h2>3. Absolute</h2>
+    <div class="example absolute">
+      <div class="box a">Box A</div>
+      <div class="box b">Absolute</div>
+      <div class="box c">Box C</div>
+    </div>
+    <p><strong>Absolute</strong> elements are taken out of the flow and positioned relative to the nearest positioned ancestor.</p>
+  </div>
+
+  <!-- Fixed -->
+  <div class="section">
+    <h2>4. Fixed</h2>
+    <div class="example">
+      <p>Scroll the page — the red box stays fixed.</p>
+    </div>
+    <div class="fixed-box">I am Fixed</div>
+    <p><strong>Fixed</strong> elements stay in place relative to the viewport, even when scrolling.</p>
+  </div>
+
+  <!-- Sticky -->
+  <div class="section">
+    <h2>5. Sticky</h2>
+    <div class="sticky-container">
+      <div class="sticky-header">I stick to the top when scrolling</div>
+      <p>Scroll down...<br>Scroll more...<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec lorem vel elit tincidunt tincidunt. Nulla facilisi. Sed at diam nec magna euismod vehicula.</p>
+      <p>More content to make scrolling happen...</p>
+    </div>
+    <p><strong>Sticky</strong> behaves like relative until you scroll, then it sticks like fixed within its container.</p>
+  </div>
+
+  <!-- Z-index -->
+  <div class="section">
+    <h2>6. Z-index</h2>
+    <div class="example zindex">
+      <div class="box a">z:10</div>
+      <div class="box b">z:5</div>
+      <div class="box c">z:1</div>
+    </div>
+    <p><strong>Z-index</strong> decides which element appears on top. Higher value = on top.</p>
+  </div>
+
+</body>
+</html>
