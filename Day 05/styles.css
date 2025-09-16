@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #cfc7c7;
+}
+
+
+.container {
+    display: flex;
+    background-color: rgb(88, 166, 190);
+    padding: 5px;
+    gap: 5px;
+}
+
+.Box {
+    width: 200px;
+    height: 300px;
+    
+    /* border-radius: 10px; */
+}
+
+.first {
+    background-color: #4260f5;
+    /* margin: 20px; */
+}
+
+.second {
+    background-color: #f5428d;
+    /* margin: 20px; */
+}
