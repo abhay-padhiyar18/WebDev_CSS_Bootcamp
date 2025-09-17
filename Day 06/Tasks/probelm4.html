@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .box1, .box2, .box3, .box4,  .box5, .box6 {
+            background-color: #6cc16c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+            .container {
+                grid-column: 1 / -1;
+                margin-bottom: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+            
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            body {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+        }
+        @media (min-width: 901px) {
+            body {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Responsive Image Grid</h1>
+    </div>
+    <div class="box1">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png" alt="img">
+    </div>
+
+    <div class="box2">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/055/332/908/small_2x/3d-icon-avatar-cartoon-happy-man-with-glasses-is-smiling-and-wearing-a-white-sweater-on-cutout-transparent-background-png.png" alt="img">
+    </div>
+
+    <div class="box3">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/046/634/849/small/3d-cute-cartoon-male-farmer-png.png" alt="img">
+    </div>
+    <div class="box4">
+        <img src="https://png.pngtree.com/png-vector/20250825/ourmid/pngtree-customer-service-man-smiling-png-image_17197800.webp" alt="img">
+    </div>
+
+    <div class="box5">
+        <img src="https://png.pngtree.com/png-vector/20250321/ourmid/pngtree-professional-handshake-between-two-business-partners-in-a-corporate-setting-png-image_15809149.png" alt="img">
+    </div>
+
+     <div class="box6">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/060/418/194/small_2x/gorgeous-dynamic-tropical-stylish-hipster-with-a-beard-and-glasses-with-transparent-background-8k-free-png.png" alt="img">
+    </div>
+
+
+</body>
+</html>
