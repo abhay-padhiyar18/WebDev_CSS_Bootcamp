@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Glow</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .btn-glow {
+            padding: 12px 30px;
+            font-size: 50px;
+            color: white;
+            background-color: royalblue;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px 5px rgba(65, 105, 225, 0.7);
+            /* background-color: #3700b3; */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-glow">Click Me</button>
+</body>
+</html>

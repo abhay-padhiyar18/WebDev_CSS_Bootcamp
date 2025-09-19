@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080808;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ball {
+  height: 100px;
+  width: 100px;
+  background: tomato;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    top: 0;
+  }
+  to {
+    top: 300px;
+  }
+}

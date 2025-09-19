@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flip Effect</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #112336;
+            font-family: sans-serif;
+        }
+
+        /* Card box */
+        .card {
+            width: 250px;
+            height: 150px;
+            perspective: 1000px;
+            /* 3D effect */
+        }
+
+
+        /* Inner part that flips */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        /* Flip on hover */
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back side */
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            /* hide backside */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .card-front img,
+        .card-back img {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        /* Front style */
+        .card-front {
+            background: royalblue;
+        }
+
+        
+        /* Back style */
+        .card-back {
+            background: crimson;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+
+                <img src="https://jacoblund.com/cdn/shop/products/1acae13664b2b4d3bd9dd14663e5327f_eebd211e-faf1-4eeb-8a2a-e950b9dacf1c.jpg?v=1674564934"
+                    alt="front">
+            </div>
+            <div class="card-back">
+
+                <img src="https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1662131216/ComputerScience.org/CompSci_Bootcamps_WebDeveloper_FTR_350920adb/CompSci_Bootcamps_WebDeveloper_FTR_350920adb.jpg?_i=AA"
+                    alt="back">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
