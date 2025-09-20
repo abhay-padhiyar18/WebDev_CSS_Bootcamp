@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(ellipse at center, #000000 0%, #0d1b2a 100%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
 }
 
@@ -47,10 +47,10 @@ body {
   transition: transform 0.3s ease; /* smooth hover */
 }
 
-/* .planet:hover {
-  transform: translateY(-50%) scale(1.5);
-} */
-
+.planet:hover {
+  transform: translateY(-50%) scale(1.5); /* enlarge on hover */
+  /* z-index: 10; bring to front */
+}
 /* -------- PLANETS -------- */
 
 /* Mercury */

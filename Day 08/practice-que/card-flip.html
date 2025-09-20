@@ -12,7 +12,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #112336;
+            background: #27292a;
             font-family: sans-serif;
         }
 
@@ -22,6 +22,7 @@
             height: 150px;
             perspective: 1000px;
             /* 3D effect */
+            cursor: pointer;  
         }
 
 
@@ -50,6 +51,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             border-radius: 10px;
             font-size: 20px;
             color: white;
@@ -60,18 +62,12 @@
             width: 500px;
             height: 300px;
             border-radius: 10px;
-            object-fit: contain;
+            object-fit: fill;
         }
 
-        /* Front style */
-        .card-front {
-            background: royalblue;
-        }
-
-        
         /* Back style */
         .card-back {
-            background: crimson;
+
             transform: rotateY(180deg);
         }
     </style>
@@ -81,13 +77,13 @@
     <div class="card">
         <div class="card-inner">
             <div class="card-front">
-
-                <img src="https://jacoblund.com/cdn/shop/products/1acae13664b2b4d3bd9dd14663e5327f_eebd211e-faf1-4eeb-8a2a-e950b9dacf1c.jpg?v=1674564934"
+                <img src="https://images.shiksha.com/mediadata/shikshaOnline/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg"
                     alt="front">
+
             </div>
             <div class="card-back">
 
-                <img src="https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1662131216/ComputerScience.org/CompSci_Bootcamps_WebDeveloper_FTR_350920adb/CompSci_Bootcamps_WebDeveloper_FTR_350920adb.jpg?_i=AA"
+                <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg"
                     alt="back">
             </div>
         </div>
